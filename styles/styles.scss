@@ -1,0 +1,117 @@
+@use "fonts";
+@use "colors";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 32px;
+}
+
+body {
+    font-family: Inter;
+    font-weight: 700;
+    color: colors.$dark-blue;
+    min-height: 100vh;
+    background-image: url('../images/pattern-bg.svg'), url('../images/pattern-curve.svg'), url('../images/pattern-quotes.svg');
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 23rem 1rem, left bottom, 10.5rem 6.7rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 95% auto;
+}
+
+.card {
+    align-self: center;
+    height: 17rem;
+    width: 40rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 58% auto;
+    position: relative;
+    top: 0.5rem;
+    right: 2rem;
+
+    &__testimonial {
+        margin-top: 5.7rem;
+        width: 86%;
+        font-weight: 300;
+        font-size: 1rem;
+        margin-left: 22.5%;
+        z-index: 1;
+        line-height: 1.3rem;
+    }
+
+    &__paragraph {
+        margin-bottom: 1rem;
+    }
+
+    &__user,
+    &__user-career {
+        display: inline;
+    }
+
+    &__user {
+        font-weight: 700;
+        font-size: 0.7rem;
+    }
+
+    &__user-career {
+        font-weight: 500;
+        color: colors.$gray-blue;
+        font-size: 0.6rem;
+        margin-left: 0.1rem;
+    }
+
+    &__img {
+        background-image: url("../images/image-tanya.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100%;
+        box-shadow: 0rem 0.4rem 1rem -0.1rem rgb(0, 0, 0, 0.3);
+    }
+
+    &__btns {
+        position: relative;
+        top: 16.3rem;
+        left: 2.7rem;
+    }
+
+    &__btn-left,
+    &__btn-right {
+        background-color: white;
+        height: 1.4rem;
+        width: 1.4rem;
+        border: none;
+        background-size: 0.3rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0rem 0.2rem 0.11rem -0.1rem rgb(0, 0, 0, 0.3);
+
+        &:hover {
+            background-color: rgb(230, 230, 230);
+        }
+        
+        &:active {
+            background-color: rgb(210, 210, 210);
+        }
+    }
+
+    &__btn-left {
+        background-image: url("../images/icon-prev.svg");
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;        
+    }
+
+    &__btn-right {
+        margin-left: -0.3rem;
+        background-image: url("../images/icon-next.svg");
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+}
