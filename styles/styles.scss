@@ -13,6 +13,22 @@
     font-size: 32px;
 }
 
+@keyframes fade {
+    from {
+        top: -3rem;
+        opacity: 0.3;
+    }
+    to {
+        top: 0rem;
+        opacity: 1;
+    }
+}
+
+.fade-animation {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
 body {
     font-family: Inter;
     font-weight: 700;
@@ -28,7 +44,7 @@ body {
 
 .card {
     align-self: center;
-    height: 17rem;
+    height: 16.8rem;
     width: 40rem;
     margin: auto;
     display: grid;
@@ -38,6 +54,7 @@ body {
     right: 2rem;
 
     &__testimonial {
+        position: relative;
         margin-top: 5.7rem;
         width: 86%;
         font-weight: 300;
@@ -69,16 +86,12 @@ body {
     }
 
     &__img {
-        background-image: url("../images/image-tanya.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100%;
         box-shadow: 0rem 0.4rem 1rem -0.1rem rgb(0, 0, 0, 0.3);
     }
 
     &__btns {
         position: relative;
-        top: 16.3rem;
+        top: -1rem;
         left: 2.7rem;
     }
 
