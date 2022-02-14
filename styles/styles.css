@@ -11,7 +11,7 @@
 }
 
 :root {
-  font-size: 32px;
+  font-size: 29px;
 }
 
 @-webkit-keyframes fade {
@@ -50,6 +50,7 @@ body {
   background-image: url("../images/pattern-bg.svg"), url("../images/pattern-curve.svg"), url("../images/pattern-quotes.svg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 23rem 1rem, left bottom, 10.5rem 6.7rem;
+  background-size: 21.8rem, 16rem, 3.7rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 95% auto;
@@ -94,6 +95,7 @@ body {
 }
 .card__img {
   box-shadow: 0rem 0.4rem 1rem -0.1rem rgba(0, 0, 0, 0.3);
+  height: 16.9rem;
 }
 .card__btns {
   position: relative;
@@ -126,4 +128,258 @@ body {
   background-image: url("../images/icon-next.svg");
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-position: 24rem 0.6rem, left bottom, 11.2rem 6.6rem;
+    background-size: 21.8rem, 17rem, 3.5rem;
+  }
+
+  .card__btns {
+    top: -0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    font-size: 23px;
+  }
+
+  body {
+    background-position: 21.3rem 3.3rem, left bottom, 8.7rem 9.3rem;
+    background-size: 21.8rem, 20rem, 3.5rem;
+  }
+
+  .card__btns {
+    top: -0.7rem;
+    left: 2.3rem;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: 0.35rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    font-size: 18px;
+  }
+
+  body {
+    background-position: 20.9rem 7.7rem, left bottom, 7.7rem 13rem;
+    background-size: 21rem, 25rem, 3.5rem;
+  }
+
+  .card__btns {
+    top: -0.7rem;
+    left: 2.3rem;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-size: 0.35rem;
+  }
+}
+@media screen and (min-width: 512px) and (max-width: 767px) {
+  :root {
+    font-size: 17px;
+  }
+
+  body {
+    min-height: 135vh;
+    background-position: 2rem 0.4rem, left bottom, 12.5rem 28rem;
+    background-size: 26.5rem, 20rem, 5.5rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto;
+    height: 43rem;
+    width: 25rem;
+    right: 0;
+    top: 0;
+  }
+  .card__testimonial {
+    margin-left: 0;
+    margin-top: 6.5rem;
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .card__img {
+    order: 1;
+    width: 84%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0rem 1.5rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
+  }
+  .card__btns {
+    top: -1.5rem;
+    left: 0;
+    width: inherit;
+    text-align: center;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 2.8rem;
+    width: 2.8rem;
+    background-size: 0.7rem;
+    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
+  }
+  .card__user, .card__user-career {
+    display: block;
+  }
+  .card__user {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__user-career {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 511px) {
+  :root {
+    font-size: 17px;
+  }
+
+  body {
+    min-height: 135vh;
+    background-position: 1rem 0.4rem, left bottom, 11.5rem 28rem;
+    background-size: 26.5rem, 20rem, 5.5rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto;
+    height: 43rem;
+    width: 25rem;
+    right: 0;
+    top: 0;
+  }
+  .card__testimonial {
+    margin-left: 0;
+    margin-top: 6.5rem;
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .card__img {
+    order: 1;
+    width: 84%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0rem 1.5rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
+  }
+  .card__btns {
+    top: -1.5rem;
+    left: 0;
+    width: inherit;
+    text-align: center;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 2.8rem;
+    width: 2.8rem;
+    background-size: 0.7rem;
+    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
+  }
+  .card__user, .card__user-career {
+    display: block;
+  }
+  .card__user {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__user-career {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 479px) {
+  :root {
+    font-size: 14px;
+  }
+
+  body {
+    min-height: 135vh;
+    background-position: 0.4rem 5.6rem, left bottom, 11rem 33rem;
+    background-size: 26.5rem, 23rem, 5.5rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto;
+    height: 43rem;
+    width: 25rem;
+    right: 0;
+    top: 0;
+  }
+  .card__testimonial {
+    margin-left: 0;
+    margin-top: 6.5rem;
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .card__img {
+    order: 1;
+    width: 84%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0rem 1.5rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
+  }
+  .card__btns {
+    top: -1.5rem;
+    left: 0;
+    width: inherit;
+    text-align: center;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 2.8rem;
+    width: 2.8rem;
+    background-size: 0.7rem;
+    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
+  }
+  .card__user, .card__user-career {
+    display: block;
+  }
+  .card__user {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__user-career {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    padding-top: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
