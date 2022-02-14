@@ -6,27 +6,39 @@ const testInfo = {
     "picture": ["url(\"../images/image-tanya.jpg\")", "url(\"../images/image-john.jpg\")"]
 }
 
-const userPar = document.querySelector(".card__paragraph");
-const userName = document.querySelector(".card__user");
-const userCareer = document.querySelector(".card__user-career");
-const userImg = document.querySelector(".card__img");
+// const userPar = document.querySelector(".card__paragraph");
+// const userName = document.querySelector(".card__user");
+// const userCareer = document.querySelector(".card__user-career");
 const leftBtn = document.querySelector(".card__btn-left");
 const rightBtn = document.querySelector(".card__btn-right");
-let userCtr = 0;
+let slidePos = 0;
 
-leftBtn.addEventListener("click", switchTestimonial);
-rightBtn.addEventListener("click", switchTestimonial);
+leftBtn.addEventListener("click", () => plusSlides(-1));
+rightBtn.addEventListener("click", () => plusSlides(1));
 
-function switchTestimonial() {
-    console.log(this.getAttribute("id"));
-    if (this.getAttribute("id") == "left") userCtr--;
-    else userCtr++;
+function plusSlides(n) {
+    slideShow(slidePos += n);
+}
 
-    userCtr = Math.abs(userCtr) % 2;
+function slideShow(n) {
+    console.log("Slide Pos: " + n);
+    const userTests = document.querySelectorAll(".card__testimonial");
+    const userImgs = document.querySelectorAll(".card__img");
+    console.log(userImgs);
+    if (n == userTests.length) slidePos = 0;
+    if (n < 0) slidePos = userTests.length - 1;
+    for (let i = 0; i < userTests.length; i++) {
+        userTests[i].style.display = 'none';
+        userImgs[i].style.display = 'none';
+    }
 
-    userPar.textContent = testInfo["text"][userCtr];
-    userName.textContent = testInfo["name"][userCtr];
-    userCareer.textContent = testInfo["occupation"][userCtr];
-    userImg.style.backgroundImage = testInfo["picture"][userCtr];
+    userTests[slidePos].style.display = 'block';
+    userTests[slidePos].classList.add("fade-animation");
+
+    userImgs[slidePos].style.display = 'block';
+    userImgs[slidePos].classList.add("fade-animation");
 
 }
+
+slideShow(slidePos);
+
