@@ -47,10 +47,10 @@ body {
   font-weight: 700;
   color: #202046;
   min-height: 100vh;
-  background-image: url("../images/pattern-bg.svg"), url("../images/pattern-curve.svg"), url("../images/pattern-quotes.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 23rem 1rem, left bottom, 10.5rem 6.7rem;
-  background-size: 21.8rem, 16rem, 3.7rem;
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 15rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 95% auto;
@@ -64,8 +64,22 @@ body {
   display: grid;
   grid-template-columns: 58% auto;
   position: relative;
-  top: 0.5rem;
+  top: 1rem;
   right: 2rem;
+}
+.card__background {
+  position: absolute;
+  z-index: -1;
+}
+.card__background--quotes {
+  width: 4rem;
+  top: 3.5rem;
+  left: 8.5rem;
+}
+.card__background--bg {
+  width: 21.5rem;
+  left: 21.5rem;
+  top: -2rem;
 }
 .card__testimonial {
   position: relative;
@@ -142,22 +156,23 @@ body {
 
 @media screen and (min-width: 1440px) {
   body {
-    background-position: 24rem 0.6rem, left bottom, 11.2rem 6.6rem;
-    background-size: 21.8rem, 17rem, 3.5rem;
+    background-position: left bottom;
+    background-size: 17rem;
   }
 
   .card__btns {
     top: -0.7rem;
   }
 }
+/*----- DESKTOP VIEW -----*/
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   :root {
     font-size: 23px;
   }
 
   body {
-    background-position: 21.3rem 3.3rem, left bottom, 8.7rem 9.3rem;
-    background-size: 21.8rem, 20rem, 3.5rem;
+    background-position: left bottom;
+    background-size: 18rem;
   }
 
   .card__btns {
@@ -176,10 +191,13 @@ body {
   }
 
   body {
-    background-position: 20.9rem 7.7rem, left bottom, 7.7rem 13rem;
-    background-size: 21rem, 25rem, 3.5rem;
+    background-position: left bottom;
+    background-size: 20rem;
   }
 
+  .card {
+    right: 4rem;
+  }
   .card__btns {
     top: -0.7rem;
     left: 2.3rem;
@@ -190,156 +208,37 @@ body {
     background-size: 0.35rem;
   }
 }
+/*----- MOBILE VIEW -----*/
 @media screen and (min-width: 512px) and (max-width: 767px) {
   :root {
     font-size: 17px;
   }
 
   body {
-    min-height: 135vh;
-    background-position: 2rem 0.4rem, left bottom, 12.5rem 28rem;
-    background-size: 26.5rem, 20rem, 5.5rem;
-  }
-
-  .card {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50% auto;
-    height: 43rem;
-    width: 25rem;
-    right: 0;
-    top: 0;
-  }
-  .card__testimonial {
-    margin-left: 0;
-    margin-top: 6.5rem;
-    width: 100%;
-    text-align: center;
-    order: 2;
-  }
-  .card__paragraph {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-  .card__img {
-    order: 1;
-    width: 84%;
-    margin: auto;
-    height: auto;
-    box-shadow: 0rem 1.5rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
-  }
-  .card__btns {
-    top: -1.5rem;
-    left: 0;
-    width: inherit;
-    text-align: center;
-  }
-  .card__btn-left, .card__btn-right {
-    height: 2.8rem;
-    width: 2.8rem;
-    background-size: 0.7rem;
-    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
-  }
-  .card__user, .card__user-career {
     display: block;
-  }
-  .card__user {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .card__user-career {
-    font-size: 1rem;
-  }
-
-  .attribution {
-    text-align: center;
-    font-size: 0.7rem;
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 511px) {
-  :root {
-    font-size: 17px;
-  }
-
-  body {
-    min-height: 135vh;
-    background-position: 1rem 0.4rem, left bottom, 11.5rem 28rem;
-    background-size: 26.5rem, 20rem, 5.5rem;
+    overflow: auto;
+    background-position: left bottom;
+    background-size: 18rem;
   }
 
   .card {
     grid-template-columns: 1fr;
     grid-template-rows: 50% auto;
-    height: 43rem;
+    height: 46rem;
     width: 25rem;
     right: 0;
     top: 0;
+    margin-top: 4rem;
   }
-  .card__testimonial {
-    margin-left: 0;
-    margin-top: 6.5rem;
-    width: 100%;
-    text-align: center;
-    order: 2;
+  .card__background--bg {
+    left: -0.5rem;
+    top: -2.5rem;
+    width: 27rem;
   }
-  .card__paragraph {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-  .card__img {
-    order: 1;
-    width: 84%;
-    margin: auto;
-    height: auto;
-    box-shadow: 0rem 1.5rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
-  }
-  .card__btns {
-    top: -1.5rem;
-    left: 0;
-    width: inherit;
-    text-align: center;
-  }
-  .card__btn-left, .card__btn-right {
-    height: 2.8rem;
-    width: 2.8rem;
-    background-size: 0.7rem;
-    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
-  }
-  .card__user, .card__user-career {
-    display: block;
-  }
-  .card__user {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  .card__user-career {
-    font-size: 1rem;
-  }
-
-  .attribution {
-    text-align: center;
-    font-size: 0.7rem;
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 368px) and (max-width: 479px) {
-  :root {
-    font-size: 14px;
-  }
-
-  body {
-    min-height: 135vh;
-    background-position: 0.4rem 5.6rem, left bottom, 11rem 33rem;
-    background-size: 26.5rem, 23rem, 5.5rem;
-  }
-
-  .card {
-    grid-template-columns: 1fr;
-    grid-template-rows: 50% auto;
-    height: 43rem;
-    width: 25rem;
-    right: 0;
-    top: 0;
+  .card__background--quotes {
+    width: 6rem;
+    top: 26rem;
+    left: 9.5rem;
   }
   .card__testimonial {
     margin-left: 0;
@@ -355,10 +254,10 @@ body {
   }
   .card__img {
     order: 1;
-    width: 84%;
+    width: 85%;
     margin: auto;
     height: auto;
-    box-shadow: 0rem 1.5rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0rem 2rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
   }
   .card__btns {
     top: -1.5rem;
@@ -386,6 +285,164 @@ body {
   .attribution {
     text-align: center;
     font-size: 0.7rem;
-    padding-top: 1rem;
+    padding-top: 4rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 511px) {
+  :root {
+    font-size: 16px;
+  }
+
+  body {
+    display: block;
+    overflow: auto;
+    background-position: left bottom;
+    background-size: 18rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto;
+    height: 46rem;
+    width: 25rem;
+    right: 0;
+    top: 0;
+    margin-top: 4rem;
+  }
+  .card__background--bg {
+    left: -0.5rem;
+    top: -2.5rem;
+    width: 27rem;
+  }
+  .card__background--quotes {
+    width: 6rem;
+    top: 26rem;
+    left: 9.5rem;
+  }
+  .card__testimonial {
+    margin-left: 0;
+    margin-top: 6.5rem;
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .card__img {
+    order: 1;
+    width: 85%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0rem 2rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
+  }
+  .card__btns {
+    top: -1.5rem;
+    left: 0;
+    width: inherit;
+    text-align: center;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 2.8rem;
+    width: 2.8rem;
+    background-size: 0.7rem;
+    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
+  }
+  .card__user, .card__user-career {
+    display: block;
+  }
+  .card__user {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__user-career {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    text-align: center;
+    font-size: 0.7rem;
+    padding-top: 4rem;
+  }
+}
+@media screen and (min-width: 368px) and (max-width: 479px) {
+  :root {
+    font-size: 13px;
+  }
+
+  body {
+    display: block;
+    overflow: auto;
+    background-position: left bottom;
+    background-size: 18rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto;
+    height: 46rem;
+    width: 25rem;
+    right: 0;
+    top: 0;
+    margin-top: 4rem;
+  }
+  .card__background--bg {
+    left: -0.5rem;
+    top: -2.5rem;
+    width: 27rem;
+  }
+  .card__background--quotes {
+    width: 6rem;
+    top: 26rem;
+    left: 9.5rem;
+  }
+  .card__testimonial {
+    margin-left: 0;
+    margin-top: 6.5rem;
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .card__paragraph {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .card__img {
+    order: 1;
+    width: 85%;
+    margin: auto;
+    height: auto;
+    box-shadow: 0rem 2rem 2rem -1.1rem rgba(0, 0, 0, 0.5);
+  }
+  .card__btns {
+    top: -1.5rem;
+    left: 0;
+    width: inherit;
+    text-align: center;
+  }
+  .card__btn-left, .card__btn-right {
+    height: 2.8rem;
+    width: 2.8rem;
+    background-size: 0.7rem;
+    box-shadow: 2rem 0.5rem 1.15rem -0.15rem rgba(0, 0, 0, 0.3);
+  }
+  .card__user, .card__user-career {
+    display: block;
+  }
+  .card__user {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card__user-career {
+    font-size: 1rem;
+  }
+
+  .attribution {
+    text-align: center;
+    font-size: 0.7rem;
+    padding-top: 4rem;
   }
 }/*# sourceMappingURL=styles.css.map */
