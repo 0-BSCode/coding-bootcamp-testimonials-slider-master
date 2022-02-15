@@ -1,3 +1,21 @@
+commit 671cca6e705e539d2f696b94cf11d38a09dddcbf
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Tue Feb 15 14:58:42 2022 +0800
+
+    Commented code that helped with positioning
+
+commit f11eec260567ff75536c448d1a88ec4c36fe9880
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Tue Feb 15 14:58:10 2022 +0800
+
+    Updated to-do list
+
+commit d0516af5b87d9f6ead3feb1f8457f000f0680d48
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Tue Feb 15 14:55:27 2022 +0800
+
+    Created log file for commits
+
 commit 53bb62f9d88033467c8fb84f411da1e4a0ec86b7
 Author: Bryan Sanchez <bryanipsanchez@gmail.com>
 Date:   Tue Feb 15 14:51:42 2022 +0800
