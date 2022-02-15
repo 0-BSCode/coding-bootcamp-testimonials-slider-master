@@ -9,21 +9,34 @@ window.addEventListener("keydown", event => {
     else if (event.key == 'd' || event.key == 'D') plusSlides(1);
 })
 
+// Modify slidePos and feed it to slideShow function
 function plusSlides(n) {
     slideShow(slidePos += n);
 }
 
+// Changes images and text as buttons are clicked
 function slideShow(n) {
+
+    // Get the elements containing the text and images
     const userTests = document.querySelectorAll(".card__testimonial");
     const userImgs = document.querySelectorAll(".card__img");
-    console.log(userImgs);
+
+    // If slidePos exceeds number of images/text to slide through,
+    // reset it (loop back to first one)
     if (n == userTests.length) slidePos = 0;
+
+    // If slidePos goes below 0, wrap it around, showing the 
+    // last image/text of the slideshow instead
     if (n < 0) slidePos = userTests.length - 1;
+
+    // Remove all images/text from being displayed
     for (let i = 0; i < userTests.length; i++) {
         userTests[i].style.display = 'none';
         userImgs[i].style.display = 'none';
     }
 
+    // Put on display again the text/image whose index is slidePos
+    // and add the class that enables the fade animation to reset it
     userTests[slidePos].style.display = 'block';
     userTests[slidePos].classList.add("fade-animation");
 
@@ -36,7 +49,6 @@ slideShow(slidePos);
 /*
 TO-DO:
 1. Documentation
-    - Comment JS script
     - Write README.md file
 2. Try to find way to anchor background images of body to card
     - Prevents tweaking of size and position every time view width changes
