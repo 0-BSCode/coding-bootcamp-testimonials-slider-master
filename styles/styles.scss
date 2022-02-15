@@ -132,7 +132,7 @@ body {
 }
 
 .attribution { 
-    font-size: 0.7rem;
+    font-size: 0.4rem;
     text-align: left; 
     padding-left: 1rem;
 }
@@ -275,6 +275,8 @@ body {
     }
 
     .attribution {
+        text-align: center;
+        font-size: 0.7rem;
         padding-top: 1rem;
     }
 }
@@ -350,11 +352,13 @@ body {
     }
 
     .attribution {
+        text-align: center;
+        font-size: 0.7rem;
         padding-top: 1rem;
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 479px) {
+@media screen and (min-width: 368px) and (max-width: 479px) {
     :root {
         font-size: 14px;
     }
@@ -426,6 +430,8 @@ body {
     }
 
     .attribution {
+        text-align: center;
+        font-size: 0.7rem;
         padding-top: 1rem;
     }
 }
