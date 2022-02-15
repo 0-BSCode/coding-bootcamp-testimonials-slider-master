@@ -54,6 +54,11 @@ body {
     top: 1rem;
     right: 2rem;
 
+    // Set background images to absolute
+    // and their parent (card) to relative
+    // allows card to be anchor of images
+    // Using top, left, bottom, right adjusts
+    // background images wrt card (not body)
     &__background {
         position: absolute;
         z-index: -1;
