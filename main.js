@@ -50,7 +50,4 @@ slideShow(slidePos);
 TO-DO:
 1. Documentation
     - Write README.md file
-2. Try to find way to anchor background images of body to card
-    - Prevents tweaking of size and position every time view width changes
-3. Figure out how to account for changes in vertical height
 */
