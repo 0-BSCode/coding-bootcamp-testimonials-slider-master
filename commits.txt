@@ -1,3 +1,27 @@
+commit 15e46fa826e935d631425ac1c92c479dca285e44
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Wed Feb 16 13:27:09 2022 +0800
+
+    Configured .gitignore
+
+commit 98c17d198ba97a64be687489953d9186783fa877
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Wed Feb 16 13:26:28 2022 +0800
+
+    Initialized .gitignore
+
+commit 29932dec09313480c0d932c747194838d1c57189
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Wed Feb 16 13:22:30 2022 +0800
+
+    Wrote out documentation
+
+commit f298dcefb47686b18bbacd6da5b0966ff7e58fe7
+Author: Bryan Sanchez <bryanipsanchez@gmail.com>
+Date:   Tue Feb 15 14:59:05 2022 +0800
+
+    Updated commits log
+
 commit 671cca6e705e539d2f696b94cf11d38a09dddcbf
 Author: Bryan Sanchez <bryanipsanchez@gmail.com>
 Date:   Tue Feb 15 14:58:42 2022 +0800
