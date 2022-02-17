@@ -1,92 +1,191 @@
-# Frontend Mentor - Coding bootcamp testimonials slider
+# Frontend Mentor - Coding bootcamp testimonials slider solution
 
-![Design preview for the Coding bootcamp testimonials slider coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Coding bootcamp testimonials slider challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Frontend Mentor - Coding bootcamp testimonials slider solution](#frontend-mentor---coding-bootcamp-testimonials-slider-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this testimonial slider and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to: 
+Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - Navigate the slider using either their mouse/trackpad or keyboard
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./Screenshot.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- Desktop-first workflow
+- Vanilla JS
+- SCSS
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+My first major learning from this challenge is figuring out how to be more purposeful with my HTML tags. Before, I'd mainly just use `div`'s whenever I needed a container and wanted to get in the practice of not just throwing `div`'s around. So, I did some research on when to use certain HTML tags and, from what I've understood, I decided to use the `main` and `section` tags. The `main` tag is, as the name implies, used to encapsulate the main content of the page. In this case, I used it as a container for the text and images of the page. I divided the container's left and right side into sections via the `section` tag, which is used to divide a page into different sections. The left side contained the text while the right contained the image and buttons used to navigate through the testimonials. I only used `div` tags when I needed containers to be nested inside these sections. In the end, my overall HTML structure looked roughly like so
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```html
+<main> <!-- Contains the entire main content of the page -->
+  <section> <!-- Contains the entire left section of the main content -->
+    <div> <!-- Contains the text of the testimonial -->
+    </div>
+  </section>
+  <section> <!-- Contains the entire right section of the main content -->
+    <div> <!-- Contains the image and buttons -->
+    </div>
+  </section>
+</main>
+```
 
-## Deploying your project
+My second big learning, which was the main reason I took up this challenge, was how to create animations in CSS. The code to create a simple one is as follows.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```css
+@keyframes changeColor {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: red;
+  }
+}
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+.container {
+  animation-name: changeColor;
+  animation-duration: 4s;
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+The code above animates an element with the class container using the animation named "changeColor", which changes the background color of the element from yellow to red in 4 seconds. The keyframes "changeColor" specifies what the animation does. In the `.container` class, the `animation-name` and `animation-duration` statements assigned the "changeColor" animation to it. Another way of assigning animations to an element is to create a class that specifies all the animation settings and then adding that class to an element we want to animate. For example,
 
-## Create a custom `README.md`
+```css
+@keyframes changeColor {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: red;
+  }
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.color-animation {
+  animation-name: changeColor;
+  animation-duration: 4s;
+}
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```html
+<div container="container color-animation"></div>
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+I also learned how to create a slideshow using JavaScript, although most of the code I used was taken from a w3schools tutorial (thanks w3schools!). I commented the code in my JS file to explain what each line does so feel free to check it out!
 
-## Submitting your solution
+Another major learning of mine over the course of this challenge was how to adjust the height of the body to fit the content of the page. In my previous challenges, I always struggled to figure out why the body of the HTML document didn't take up the entire space in my viewport. With a little research, I found that the following code fixes the issue by manually setting the height of the body to take up 100% of the viewport's height.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```css
+body {
+  min-height: 100vh;
+}
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+Although this resolved my issue for the desktop design, I ended up coming across a little hiccup when I started with the mobile design, where I wanted the content to extend beyond the height of the viewport. However, since I set the body's height to 100vh, it wouldn't extend to fit the content of the page. With more research, I found that the following code allows the body's height to adjust to the height of the page's content (although I'm still figuring out how it really works).
 
-## Sharing your solution
+```css
+body {
+  display: block;
+  overflow: auto;
+}
+```
 
-There are multiple places you can share your solution:
+Another problem I came across while doing the challenge was the placement of the patterns to be used in the background. Based on my previous challenges, my go-to action would be to place multiple background images in the body and use the `background-position` statement to move them into the desired position.
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+```css
+body {
+  background-image: url("url/to/image1"), url("url/to/image2");
+  background-position: 5rem 3rem, 3rem 5rem;
+}
+```
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+This solution did work when the page's size didn't change. However, it was a horrible solution for a responsive web page since the images would move as the page's width changed when I wanted them to be anchored to certain positions with respect to the main content. As a result, I scrapped this solution and found another one that worked perfectly.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+```html
+  <div class="parent">
+    <img src="path/to/image"></img>
+  </div>
+```
 
-## Got feedback for us?
+```css
+.parent {
+  position: relative;
+}
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+.image {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  right: 0rem;
+  left: 0rem;
+}
+```
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+By setting the image's position to absolute, it removes the image from the normal flow of the document. By default, the `top`, `bottom`, `right`, and `left` statements change the position of the image with respect to the body of the document. However, by setting the image's parent's position to relative, these statements change the position of the image with respect to the image's parent. By doing so, I was able to anchor the background images to the main content of the page, which kept them in place even while the page's width was changing.
 
-**Have fun building!** 🚀
+My final major learning from this challenge was how to use local custom fonts. In previous challenges, I would simply use a link along with the `@include` CSS statement to acquire the fonts needed to complete the challenge. Unfortunately, my internet connection has gotten really unstable so I decided to find a way to use the desired fonts locally. To do this, I first downloaded the fonts online and placed them in my project folder. I then used the following code to include the font in my project.
+
+```css
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+```
+
+After running this code, I'm able to use the font on a sample element as follows.
+
+```css
+.sample-element {
+  font-family: Inter;
+}
+```
+
+### Continued development
+
+For future challenges, I want to continue using more appropriate HTML tags since I'm still not confident when it comes to doing so. I also want to be able to learn more about CSS animations, specifically how to create more complex ones and how to control their execution (e.g. how to retrigger them after a certain amount of time). Finally, I want to improve upon my JS skills in future challenges and I hope to accomplish this by picking more JS-intensive challenges. I want to be more fluent in JS since many of the tools I want to learn, such as Node, React, and Express, utilize it.
+
+### Useful resources
+
+- StackOverflow - Has answers to almost any question I could think of
+
+- [W3Schools](https://www.w3schools.com/) - This helped me refresh my memory on HTML, CSS, and JS
+- [CSS Tricks](https://css-tricks.com/) - This is a great website that explains how to use CSS properly.
+- [Stack Overflow](https://stackoverflow.com/) - This website has answers to every question I can think of when it comes to coding
+
+## Author
+
+- Website - [Github Pages](https://bry-cmd.github.io/coding-bootcamp-testimonials-slider-master/)
+- Frontend Mentor - [@Bry-cmd](https://www.frontendmentor.io/profile/Bry-cmd)
+- LinkedIn - [Bryan Sanchez](https://www.linkedin.com/in/bryan-sanchez-b316b7203/)
