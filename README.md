@@ -178,8 +178,6 @@ For future challenges, I want to continue using more appropriate HTML tags since
 
 ### Useful resources
 
-- StackOverflow - Has answers to almost any question I could think of
-
 - [W3Schools](https://www.w3schools.com/) - This helped me refresh my memory on HTML, CSS, and JS
 - [CSS Tricks](https://css-tricks.com/) - This is a great website that explains how to use CSS properly.
 - [Stack Overflow](https://stackoverflow.com/) - This website has answers to every question I can think of when it comes to coding
