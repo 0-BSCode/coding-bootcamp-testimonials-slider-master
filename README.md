@@ -48,18 +48,18 @@ Users should be able to:
 
 ### What I learned
 
-My first major learning from this challenge is figuring out how to be more purposeful with my HTML tags. Before, I'd mainly just use `div`'s whenever I needed a container and wanted to get in the practice of not just throwing `div`'s around. So, I did some research on when to use certain HTML tags and, from what I've understood, I decided to use the `main` and `section` tags. The `main` tag is, as the name implies, used to encapsulate the main content of the page. In this case, I used it as a container for the text and images of the page. I divided the container's left and right side into sections via the `section` tag, which is used to divide a page into different sections. The left side contained the text while the right contained the image and buttons used to navigate through the testimonials. I only used `div` tags when I needed containers to be nested inside these sections. In the end, my overall HTML structure looked roughly like so
+My first major learning from this challenge is figuring out how to be more purposeful with my HTML tags. Before, I'd mainly just use `div`'s whenever I needed a container and wanted to get in the practice of not just throwing `div`'s around. So, I did some research on when to use certain HTML tags and, from what I've understood, I decided to use the `main` and `article` tags. The `main` tag is, as the name implies, used to encapsulate the main content of the page. In this case, I used it as a container for the text and images of the page. I divided the container's left and right side into sections via the `article` tag, which is used to divide a page into different sections. The left side contained the text while the right contained the image and buttons used to navigate through the testimonials. I only used `div` tags when I needed containers to be nested inside these sections. In the end, my overall HTML structure looked roughly like so
 
 ```html
 <main> <!-- Contains the entire main content of the page -->
-  <section> <!-- Contains the entire left section of the main content -->
+  <article> <!-- Contains the entire left section of the main content -->
     <div> <!-- Contains the text of the testimonial -->
     </div>
-  </section>
-  <section> <!-- Contains the entire right section of the main content -->
+  </article>
+  <article> <!-- Contains the entire right section of the main content -->
     <div> <!-- Contains the image and buttons -->
     </div>
-  </section>
+  </article>
 </main>
 ```
 
@@ -184,6 +184,6 @@ For future challenges, I want to continue using more appropriate HTML tags since
 
 ## Author
 
-- Website - [Github Pages](https://bry-cmd.github.io/coding-bootcamp-testimonials-slider-master/)
+- Github - [Bry-cmd](https://github.com/Bry-cmd)
 - Frontend Mentor - [@Bry-cmd](https://www.frontendmentor.io/profile/Bry-cmd)
 - LinkedIn - [Bryan Sanchez](https://www.linkedin.com/in/bryan-sanchez-b316b7203/)
